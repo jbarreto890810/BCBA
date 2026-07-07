@@ -1,0 +1,390 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:Segoe UI,Arial,sans-serif;
+
+    background:#f4f7fb;
+
+    color:#263238;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    min-height:420px;
+
+    background:linear-gradient(135deg,#0F4C81,#1976D2);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+}
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 10%;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+.nav-button{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    background:#ffffff22;
+
+    transition:.3s;
+
+}
+
+.nav-button:hover{
+
+    background:#ffffff44;
+
+}
+
+/* ===========================
+   HERO CONTENT
+=========================== */
+
+.hero-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+.hero-content h1{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    max-width:700px;
+
+    line-height:1.6;
+
+}
+
+.primary-button{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#ff9800;
+
+    padding:18px 35px;
+
+    border-radius:14px;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.primary-button:hover{
+
+    background:#ffb74d;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   TITULOS
+=========================== */
+
+.section-header{
+
+    padding:70px 20px 35px;
+
+    text-align:center;
+
+}
+
+.section-header h2{
+
+    font-size:40px;
+
+    color:#0F4C81;
+
+}
+
+.section-header p{
+
+    margin-top:10px;
+
+    color:#607d8b;
+
+}
+
+/* ===========================
+   BUSCADOR
+=========================== */
+
+.search-box{
+
+    margin-top:30px;
+
+    width:100%;
+
+    max-width:650px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    border:2px solid #d9e2ec;
+
+    outline:none;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+.search-box:focus{
+
+    border-color:#1976D2;
+
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.course-grid{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+    padding-bottom:80px;
+
+}
+
+/* ===========================
+   TARJETAS
+=========================== */
+
+.course-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    text-decoration:none;
+
+    color:#263238;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.course-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+.course-icon{
+
+    font-size:60px;
+
+}
+
+.course-card h3{
+
+    margin-top:20px;
+
+    color:#0F4C81;
+
+    font-size:28px;
+
+}
+
+.course-card p{
+
+    margin-top:12px;
+
+    line-height:1.6;
+
+    color:#607d8b;
+
+}
+
+.course-card span{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    color:#1976D2;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#0F4C81;
+
+    color:white;
+
+    padding:30px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.hero-content h1{
+
+font-size:38px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+.logo{
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.navbar{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.hero{
+
+min-height:500px;
+
+}
+
+.hero-content h1{
+
+font-size:32px;
+
+}
+
+.section-header h2{
+
+font-size:30px;
+
+}
+
+.course-card{
+
+padding:22px;
+
+}
+
+}
