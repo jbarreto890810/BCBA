@@ -1,50 +1,118 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Curso de Griego</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    .card {
-      max-width: 500px;
-      margin: auto;
-      background: rgba(255,255,255,0.12);
-      padding: 35px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    }
-    h1 { font-size: 34px; }
-    p { font-size: 18px; line-height: 1.5; }
-    a {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 16px 28px;
-      background: #ffcc00;
-      color: #222;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 12px;
-      font-size: 18px;
-    }
-    a:hover { background: #ffd633; }
-  </style>
+
+  <title>BCBA Academy</title>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="card">
-    <h1>📚 Curso de BCBA</h1>
-    <p>Accede a todos los temas del curso desde cualquier dispositivo: iPhone, Android, Windows o Mac.</p>
-    <a href="https://drive.google.com/drive/folders/14LJIu45t_VNf4O0aZlP_BaLVLS5z5kQH?usp=drive_link" target="_blank">
-      🚀 Entrar al Curso
-    </a>
-  </div>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">🎓 BCBA Academy</div>
+      <a class="nav-button" href="#temas">Ver temas</a>
+    </nav>
+
+    <section class="hero-content">
+      <h1>Plataforma de Estudio BCBA</h1>
+      <p>
+        Accede a tus materiales organizados por temas desde cualquier dispositivo.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#temas" class="primary-button">Comenzar ahora</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section-header" id="temas">
+      <h2>Temas del Curso</h2>
+      <p>Selecciona un tema para ver sus materiales.</p>
+
+      <input
+        type="text"
+        id="searchInput"
+        class="search-box"
+        placeholder="🔍 Buscar tema..."
+      />
+    </section>
+
+    <section class="course-grid" id="courseGrid">
+
+      <a class="course-card" href="tema.html?id=A">
+        <div class="course-icon">📘</div>
+        <h3>Tema A</h3>
+        <p>Acceder al contenido del Tema A.</p>
+        <span>Entrar →</span>
+      </a>
+
+      <a class="course-card" href="tema.html?id=B">
+        <div class="course-icon">📗</div>
+        <h3>Tema B</h3>
+        <p>Acceder al contenido del Tema B.</p>
+        <span>Entrar →</span>
+      </a>
+
+      <a class="course-card" href="tema.html?id=C">
+        <div class="course-icon">📙</div>
+        <h3>Tema C</h3>
+        <p>Acceder al contenido del Tema C.</p>
+        <span>Entrar →</span>
+      </a>
+
+      <a class="course-card" href="tema.html?id=D">
+        <div class="course-icon">📕</div>
+        <h3>Tema D</h3>
+        <p>Acceder al contenido del Tema D.</p>
+        <span>Entrar →</span>
+      </a>
+
+      <a class="course-card" href="tema.html?id=E">
+        <div class="course-icon">📒</div>
+        <h3>Tema E</h3>
+        <p>Acceder al contenido del Tema E.</p>
+        <span>Entrar →</span>
+      </a>
+
+      <a class="course-card" href="tema.html?id=F">
+        <div class="course-icon">📓</div>
+        <h3>Tema F</h3>
+        <p>Acceder al contenido del Tema F.</p>
+        <span>Entrar →</span>
+      </a>
+
+      <a class="course-card" href="tema.html?id=G">
+        <div class="course-icon">📔</div>
+        <h3>Tema G</h3>
+        <p>Acceder al contenido del Tema G.</p>
+        <span>Entrar →</span>
+      </a>
+
+      <a class="course-card" href="tema.html?id=H">
+        <div class="course-icon">📂</div>
+        <h3>Tema H</h3>
+        <p>Acceder al contenido del Tema H.</p>
+        <span>Entrar →</span>
+      </a>
+
+      <a class="course-card" href="tema.html?id=I">
+        <div class="course-icon">🗂️</div>
+        <h3>Tema I</h3>
+        <p>Acceder al contenido del Tema I.</p>
+        <span>Entrar →</span>
+      </a>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Compatible con iPhone, Android, Windows y Mac · Powered by Google Drive</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
