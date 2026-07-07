@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BCBA Academy</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+body{
+
+    background:#f5f7fb;
+
+}
+
+.topic-container{
+
+    max-width:900px;
+
+    margin:60px auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+
+}
+
+.topic-title{
+
+    font-size:42px;
+
+    color:#0F4C81;
+
+}
+
+.topic-description{
+
+    margin-top:20px;
+
+    color:#607d8b;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+.materials{
+
+    margin-top:45px;
+
+}
+
+.material{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#f8fafc;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+}
+
+.material span{
+
+    font-size:18px;
+
+}
+
+.drive-button{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    background:#1976D2;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:18px 35px;
+
+    border-radius:15px;
+
+    font-weight:bold;
+
+}
+
+.back{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    color:#1976D2;
+
+    text-decoration:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topic-container">
+
+<h1 id="titulo" class="topic-title"></h1>
+
+<p id="descripcion" class="topic-description"></p>
+
+<div class="materials">
+
+<div class="material">
+
+<span>📄 Material de estudio</span>
+
+</div>
+
+<div class="material">
+
+<span>🎥 Videos</span>
+
+</div>
+
+<div class="material">
+
+<span>📝 Ejercicios</span>
+
+</div>
+
+<div class="material">
+
+<span>📚 Recursos adicionales</span>
+
+</div>
+
+</div>
+
+<a id="driveLink" class="drive-button" target="_blank">
+
+Abrir carpeta en Google Drive
+
+</a>
+
+<br>
+
+<a href="index.html" class="back">
+
+⬅ Volver al inicio
+
+</a>
+
+</div>
+
+<script>
+
+const temas={
+
+A:{
+titulo:"Tema A",
+descripcion:"Contenido correspondiente al Tema A.",
+link:"https://drive.google.com/drive/folders/1Cx36N1r7aua-ftUGjY10H1fPTFXOOgAH?usp=drive_link"
+},
+
+B:{
+titulo:"Tema B",
+descripcion:"Contenido correspondiente al Tema B.",
+link:"https://drive.google.com/drive/folders/1R15KYHJwLarvvgfrUILcSym9fCGSyvni?usp=drive_link"
+},
+
+C:{
+titulo:"Tema C",
+descripcion:"Contenido correspondiente al Tema C.",
+link:"https://drive.google.com/drive/folders/1IJ9wU_WF2wVf87VW3ND7afKw_Oddj7oa?usp=drive_link"
+},
+
+D:{
+titulo:"Tema D",
+descripcion:"Contenido correspondiente al Tema D.",
+link:"https://drive.google.com/drive/folders/1plGiCAkgov9r9SM2v7jMQ3ctvyC2kAhH?usp=drive_link"
+},
+
+E:{
+titulo:"Tema E",
+descripcion:"Contenido correspondiente al Tema E.",
+link:"https://drive.google.com/drive/folders/1p6LcvQzZppedy738RdBQ9z-mrtOGZm76?usp=drive_link"
+},
+
+F:{
+titulo:"Tema F",
+descripcion:"Contenido correspondiente al Tema F.",
+link:"https://drive.google.com/drive/folders/1Va14uGnkrcj6oG3Q2J5hQUqzObO7rRfe?usp=drive_link"
+},
+
+G:{
+titulo:"Tema G",
+descripcion:"Contenido correspondiente al Tema G.",
+link:"https://drive.google.com/drive/folders/10WRQ0KPbGTttF42gePX4DhjHY1oh4ZCE?usp=drive_link"
+},
+
+H:{
+titulo:"Tema H",
+descripcion:"Contenido correspondiente al Tema H.",
+link:"https://drive.google.com/drive/folders/1DfksfWrc9IeIq0AP4ZNp6oWdgpqPXDnV?usp=drive_link"
+},
+
+I:{
+titulo:"Tema I",
+descripcion:"Contenido correspondiente al Tema I.",
+link:"https://drive.google.com/drive/folders/15BT0c12D9ZkCA1gYQF58XqEss6rW8om0?usp=drive_link"
+}
+
+};
+
+const params=new URLSearchParams(window.location.search);
+
+const id=params.get("id");
+
+const tema=temas[id];
+
+if(tema){
+
+document.getElementById("titulo").innerHTML=tema.titulo;
+
+document.getElementById("descripcion").innerHTML=tema.descripcion;
+
+document.getElementById("driveLink").href=tema.link;
+
+}else{
+
+document.getElementById("titulo").innerHTML="Tema no encontrado";
+
+document.getElementById("descripcion").innerHTML="El tema solicitado no existe.";
+
+document.getElementById("driveLink").style.display="none";
+
+}
+
+</script>
+
+</body>
+
+</html>
